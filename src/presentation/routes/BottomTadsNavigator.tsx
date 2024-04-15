@@ -6,6 +6,7 @@ import {globalColors} from '../theme/theme';
 import {Text} from 'react-native';
 import { TopTabsNavigator } from './TopTabsNavigator';
 import { StackNavigator } from './StackNavigator';
+import { IonIcon } from '../components/shared/IonIcon';
 
 const Tab = createBottomTabNavigator();
 
@@ -34,21 +35,21 @@ export const BottomTadsNavigator = () => {
         name="Tad1"
         options={{
           title: 'tab 1',
-          tabBarIcon: ({color}) => <Text style={{color}}> Tab 1</Text>,
+          tabBarIcon: ({color}) => <IonIcon name="rocket-outline" size={20} color={color} />,
         }}
         component={Tab1Screen}
       />
       <Tab.Screen
         name="Tad2"
         options={{title: 'tab 2',
-        tabBarIcon: ({color}) => <Text style={{color}}> Tab 2</Text>,
+        tabBarIcon: ({color}) => <IonIcon name="rocket-outline" size={20} color={color} />,
         }}
         component={TopTabsNavigator}
       />
       <Tab.Screen
         name="Tad3"
         options={{title: 'tab 3',
-        tabBarIcon: ({color}) => <Text style={{color}}> Tab 3</Text>,
+        tabBarIcon: ({color}) => <IonIcon name="rocket-outline" size={20} color={color} />,
         }}
         component={StackNavigator}
       />

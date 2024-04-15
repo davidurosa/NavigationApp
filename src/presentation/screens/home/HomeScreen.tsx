@@ -1,8 +1,7 @@
-import React, {useEffect} from 'react';
-import {Pressable, Text, View} from 'react-native';
+import React from 'react';
+import { Text, View} from 'react-native';
 import {globalStyles} from '../../theme/theme';
 import {
-  DrawerActions,
   NavigationProp,
   useNavigation,
 } from '@react-navigation/native';
@@ -12,7 +11,7 @@ import {RootStackParams} from '../../routes/StackNavigator';
 export const HomeScreen = () => {
   const navigation = useNavigation<NavigationProp<RootStackParams>>();
 
-  useEffect(() => {
+ /*  useEffect(() => {
     navigation.setOptions({
       // eslint-disable-next-line react/no-unstable-nested-components
       headerLeft: () => (
@@ -22,7 +21,7 @@ export const HomeScreen = () => {
         </Pressable>
       ),
     });
-  }, []);
+  }, []); */
 
   return (
     <View style={globalStyles.container}>

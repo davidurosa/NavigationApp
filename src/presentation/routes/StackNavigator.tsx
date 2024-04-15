@@ -7,6 +7,7 @@ import {ProductsScreen} from '../screens/products/ProductsScreen';
 import {SettingScreen} from '../screens/setting/SettingScreen';
 import { ProductScreen } from '../screens/products/ProductScreen';
 import { useNavigation } from '@react-navigation/native';
+import { HamburgerMenu } from '../components/shared/HamburgerMenu';
 
 
 
@@ -22,16 +23,18 @@ const Stack = createStackNavigator<RootStackParams>();
 export const StackNavigator = () => {
 
 
-  const navigation = useNavigation();
+ /*  const navigation = useNavigation();
 
 
   useEffect(() => {
     navigation.setOptions({
       headerShown: false,
     });
-  }, []);
+  }, []); */
 
   return (
+    <>
+    <HamburgerMenu />
     <Stack.Navigator
       screenOptions={{
         headerShown: true,
@@ -45,5 +48,6 @@ export const StackNavigator = () => {
       <Stack.Screen name="product" component={ProductScreen} />
       <Stack.Screen name="Settings" component={SettingScreen} />
     </Stack.Navigator>
+    </>
   );
 };
