@@ -1,10 +1,10 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 
 export const AboutScreen = () => {
   return (
-    <view>
+    <View>
         <Text>AboutScreen !</Text>
-    </view>
+    </View>
   );
 };
